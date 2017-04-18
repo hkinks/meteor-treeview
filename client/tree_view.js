@@ -15,7 +15,7 @@ Template.TreeView.onCreated(function() {
     if (dataContext && dataContext.collection) {
       if (dataContext.subscription) {
         //console.log('Calling subscribe');
-        instance.subscribe(dataContext.subscription, {
+        instance.subscribe(dataContext.subscription, dataContext.subscriptionParameters, {
           onReady: () => {
             //console.log("onReady called");
             //console.debug(this);
